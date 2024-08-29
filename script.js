@@ -52,24 +52,12 @@ window.onload = function () {
 
 
       var projects = [
-            { Language: "Java", name: "e Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
+            { language: "Lua", name: "Nome fictício", github: "https://github.com/nacDaniel" },
+            { language: "Lua", name: "Nome fictício", github: "https://github.com/nacDaniel" },
+            { language: "Lua", name: "Nome fictício", github: "https://github.com/nacDaniel" },
+            { language: "Java", name: "Nome fictício", github: "https://github.com/nacDaniel" },
+            { language: "Java", name: "Nome fictício", github: "https://github.com/nacDaniel" },
+            { language: "Java", name: "Nome fictício", github: "https://github.com/nacDaniel" },
       ]
 
       projects.forEach(v => {
@@ -77,8 +65,8 @@ window.onload = function () {
             divNova.classList.add("projectContainerFooter");
             divNova.classList.add("cursorhover");
             divNova.insertAdjacentHTML("beforeend", '<img class="hostProjectList" alt="" src="github.ico.png">');
-            divNova.insertAdjacentHTML("beforeend", '<h4 class="nameProjectFooter">' + v.name + '</h4>');
-            document.getElementById(v.Language).getElementsByClassName("area-projects")[0].appendChild(divNova)
+            divNova.insertAdjacentHTML("beforeend", '<div class="nameProjectFooter"><span>'+v.name+' <span style="color: rgba(255, 199, 0, 0.5)">('+v.language+')</span></span></div>');
+            document.getElementsByClassName("area-projects-footer")[0].appendChild(divNova)
             divNova.addEventListener("click",
                   function (e) {
                         //window.location.href = v.github;
@@ -126,8 +114,8 @@ window.onload = function () {
 
 
       var Experiencia = [
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { Language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
+            { language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
+            { language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
       ]
 
 }
