@@ -1,5 +1,8 @@
 window.onload = function () {
 
+      /*
+      Scroll até a posição de alguma seção
+      */
       var scrollElementos = [
             { id: "formacaoAreaMenu", id_scroll: "formacao" },
             { id: "experienciaAreaMenu", id_scroll: "experiencia" },
@@ -49,15 +52,16 @@ window.onload = function () {
                   }
             }
       );
+      /*
+      Scroll até a posição de alguma seção
+      */
 
 
+      /*
+      Criar projetos no fim da págimna
+      */
       var projects = [
-            { language: "Lua", name: "Nome fictício", github: "https://github.com/nacDaniel" },
-            { language: "Lua", name: "Nome fictício", github: "https://github.com/nacDaniel" },
-            { language: "Lua", name: "Nome fictício", github: "https://github.com/nacDaniel" },
-            { language: "Java", name: "Nome fictício", github: "https://github.com/nacDaniel" },
-            { language: "Java", name: "Nome fictício", github: "https://github.com/nacDaniel" },
-            { language: "Java", name: "Nome fictício", github: "https://github.com/nacDaniel" },
+            { language: "Lua", name: "MTA:SA - BloquearComandos", github: "https://github.com/NacDaniel/Bloquear-Comandos--MTA-SA" },
       ]
 
       projects.forEach(v => {
@@ -65,21 +69,22 @@ window.onload = function () {
             divNova.classList.add("projectContainerFooter");
             divNova.classList.add("cursorhover");
             divNova.insertAdjacentHTML("beforeend", '<img class="hostProjectList" alt="" src="github.ico.png">');
-            divNova.insertAdjacentHTML("beforeend", '<div class="nameProjectFooter"><span>'+v.name+' <span style="color: rgba(255, 199, 0, 0.5)">('+v.language+')</span></span></div>');
+            divNova.insertAdjacentHTML("beforeend", '<div class="nameProjectFooter"><span>' + v.name + ' <span style="color: rgba(255, 199, 0, 0.5)">(' + v.language + ')</span></span></div>');
             document.getElementsByClassName("area-projects-footer")[0].appendChild(divNova)
             divNova.addEventListener("click",
                   function (e) {
-                        //window.location.href = v.github;
                         window.open(v.github, "_blank");
                   }
             );
       });
+       /*
+      Criar projetos no fim da págimna
+      */
 
 
       const blabbla = document.getElementById('areaSelectFile');
       blabbla.addEventListener('change', function () {
-            blabbla.atri
-            document.getElementById('textAttach').textContent = this.files[0].name
+            document.getElementById('textAreaAttachFile').textContent = this.files[0].name
       })
 
 
@@ -90,32 +95,22 @@ window.onload = function () {
             this.style.height = (this.scrollHeight) + "px";
       }, false);
 
-      /**
-      document.getElementById('buttonSendForm').addEventListener('click', function (e) {
-            e.preventDefault();
-            var opcao = document.getElementsByClassName("areaTextForm");
-            for (let i = 0; i < opcao.length; i++) {
-            var tag = opcao[i].getElementsByTagName("input");
-            console.log(tag.getAttribute("placeholder"))
-                  return;
-            }
-      })
-       */
-
       abrirEmail = function (form) {
             window.open('mailto:b36548840a@mailmaxy.one?subject=' + form.subject.value + ' - ' + form.name.value + '&body=' + form.message.value + '&attachment=' + form.file.value + '', '_blank');
             form.name.value = "";
             form.subject.value = "";
             form.message.value = "";
             form.file.value = "";
-            document.getElementById('textAttach').textContent = "Anexar Arquivo";
+            document.getElementById('textAreaAttachFile').textContent = "Anexar Arquivo";
       }
 
 
+      var eeee = document.getElementsByClassName('areaicons')[0].getElementsByTagName("img");
+      for (let i = 0; i < eeee.length; i++) {
+            eeee[i].addEventListener("click", function (e) {
+                  window.open(i == 1 ? "https://www.linkedin.com/in/danielnac/" : "https://github.com/NacDaniel/", "_blank");
+            })
+      }
 
-      var Experiencia = [
-            { language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-            { language: "Java", name: "Gerenciamento Escolar", github: "https://github.com/nacDaniel" },
-      ]
 
 }
